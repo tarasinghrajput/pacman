@@ -6,7 +6,7 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     public float speed = 8.0f;
-    public float speedMultiplier = 1.0f;
+    public float speedMultiplier = 1f;
 
     public Vector2 initialDirection;
     public LayerMask obstacleLayer;
@@ -28,9 +28,17 @@ public class Movement : MonoBehaviour
         ResetState();
     }
 
+    private void Update()
+    {
+        if(nextDirection != Vector2.zero)
+        {
+            SetDirection(nextDirection);
+        }
+    }
+
     public void ResetState()
     {
-        this.speedMultiplier = 1.0f;
+        this.speedMultiplier = 1f;
         this.direction = this.initialDirection;
         this.nextDirection = Vector2.zero;
         this.transform.position = this.startingPosition;
