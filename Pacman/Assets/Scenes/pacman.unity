@@ -3113,7 +3113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ghosts: []
-  pacman: {fileID: 0}
+  pacman: {fileID: 2065120259}
   pellets: {fileID: 308766420}
 --- !u!1 &1398786028
 GameObject:
@@ -9105,6 +9105,8 @@ GameObject:
   - component: {fileID: 2065120256}
   - component: {fileID: 2065120258}
   - component: {fileID: 2065120257}
+  - component: {fileID: 2065120260}
+  - component: {fileID: 2065120259}
   m_Layer: 6
   m_Name: Pacman
   m_TagString: Untagged
@@ -9200,6 +9202,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2065120259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065120255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74225f94b7256d248804cf7966bd83a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2065120260
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2065120255}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1001 &1654758556373329427
 PrefabInstance:
   m_ObjectHideFlags: 0
