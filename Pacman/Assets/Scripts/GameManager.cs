@@ -9,8 +9,9 @@ public class GameManager : MonoBehaviour
     public Pacman pacman;
     public Transform pellets;
     
-    public int score {get; private set; }
-    public int lives {get; private set; }
+    public int score { get; private set; }
+    public int lives { get; private set; }
+    public int ghostMultiplier { get; private set; } = 1;
 
     private void Start()
     {
@@ -34,7 +35,7 @@ public class GameManager : MonoBehaviour
 
     private void NewRound()
     {
-        foreach (Transform pellet in this.pellets )
+        foreach (Transform pellet in this.pellets)
         {
             pellet.gameObject.SetActive(true);
         }
@@ -44,6 +45,8 @@ public class GameManager : MonoBehaviour
 
     private void ResetState()
     {
+        ResetGhostMultiplier();
+
         for(int i = 0; i < ghosts.Length; i++)
         {
             this.ghosts[i].gameObject.SetActive(true);
@@ -74,7 +77,9 @@ public class GameManager : MonoBehaviour
 
     public void GhostEaten(Ghosts ghost)
     {
+        int points =  ghost.points * this.ghostMultiplier;
         SetScore(this.score + ghost.points);
+        this.ghostMultiplier++;
     }
 
     public void PacmanEaten()
@@ -89,5 +94,41 @@ public class GameManager : MonoBehaviour
         } else {
             GameOver();
         }
+    }
+
+    public void PelletEaten(Pellet pellet)
+    {
+        pellet.gameObject.SetActive(false);
+        SetScore(this.score + pellet.points);
+
+        if(!(HasRemainingPellet()))
+        {
+            this.gameObject.SetActive(false);
+            Invoke(nameof(NewRound), 3.0f);
+        }
+    }
+
+    public void PowerPelletEaten(PowerPellet pellet)
+    {
+        PelletEaten(pellet);
+        CancelInvoke();
+        Invoke(nameof(ResetGhostMultiplier), pellet.duration);
+    }
+
+    private bool HasRemainingPellet()
+    {
+        foreach (Transform pellet in this.pellets)
+        {
+            if(pellet.gameObject.activeSelf)
+            {
+                return true;
+            }
+        }
+            return false;
+    }
+
+    private void ResetGhostMultiplier()
+    {
+        this.ghostMultiplier = 1;
     }
 }
