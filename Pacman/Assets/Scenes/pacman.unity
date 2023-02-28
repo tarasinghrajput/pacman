@@ -9496,3 +9496,60 @@ MonoBehaviour:
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 512
+--- !u!1001 &8633197404802736325
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844504, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7713934401721844514, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
+      propertyPath: m_Name
+      value: GhostBlinky
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4e50066adae3aa14e892aa6fb553b66b, type: 3}
